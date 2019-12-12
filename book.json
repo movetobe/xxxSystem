@@ -1,0 +1,42 @@
+{
+    "title": "System",
+    "description": "记录成长点滴",
+    "author": "Jason",
+    "output.name": "site",
+    "language": "zh-hans",
+    "gitbook": "3.2.3",
+    "root": ".",
+    "links": {
+        "sidebar": {
+            "首页": "http://movetobe.github.io"
+        }
+    },
+    "plugins": [
+        "back-to-top-button",
+        "chapter-fold",
+        "code",
+        "-search",
+        "copy-code-button",
+        "search-pro",
+        "github",
+        "splitter",
+        "tbfed-pagefooter",
+        "-sharing",
+        "-highlight",
+        "styles-less",
+        "pageview-count"
+    ],
+    "pluginsConfig": {
+        "github": {
+            "url": "https://github.com/movetobe"
+        },
+        "code": {
+            "copyButtons": true
+        },
+        "tbfed-pagefooter": {
+            "copyright": "Copyright © Jason 2019",
+            "modify_label": "本书发布时间：",
+            "modify_format": "YYYY-MM-DD HH:mm:ss"
+        }
+    }
+}
