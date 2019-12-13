@@ -24,7 +24,7 @@
         "-sharing",
         "-highlight",
         "styles-less",
-        "pageview-count"
+        "mathjax"
     ],
     "pluginsConfig": {
         "github": {
