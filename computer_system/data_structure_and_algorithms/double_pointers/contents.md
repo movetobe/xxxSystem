@@ -1,11 +1,11 @@
-## 双指针
+## 一、双指针
 双指针是指使用两个指针对线性数据结构进行遍历/搜索的方法。
 双指针方法包括：  
 * 首尾指针
 * 快慢指针
 * 前后指针
 
-## 双指针方法解析
+## 二、双指针方法解析
 
 ### 首尾指针
 首指针从线性表从前往后遍历，尾指针从线性表尾部往前遍历。
@@ -124,10 +124,98 @@ struct list_node *find_last_kth_node(struct list_node *head, int k)
 这里就要使用快慢指针。我们想象，两个同学以不同的速度，同时从教室跑到操场，
 然后开始绕操场跑圈。  
 如果操场是直线的操场，那么跑得快的永远都在前面，直到尽头。  
-如果操场是圆圈的操场，那么跑的慢的同学和跑的快的同学总会相遇，而且肯定是在操场上相遇。  
+如果操场是圆圈的操场，那么跑得慢的同学和跑得快的同学总会相遇，而且肯定是在操场上相遇。  
 回到题目中，我们就可以这样来判断链表中是否有环：  
 * 快指针一次走2步，慢指针一次走1步，两个同时从头指针处开始走
 * 如果快指针走到了NULL，那说明没有环
-* 如果快指针与慢指针相遇了，说明存在环
+* 如果快指针与慢指针再次相遇了，说明存在环  
 
+```
+struct list_node *list_contain_circle(struct list_node *head)                                    
+{                                                                                  
+    struct list_node *fast = head;                                                 
+    struct list_node *slow = head;                                                 
+                                                                                   
+    /* fast move 2 step each time                                                  
+     * slow move 1 step each time                                                  
+     */                                                                            
+    for (;;) {                                                                     
+        /* fast pointer will goto NULL, no circle */                               
+        if ((fast->next == NULL) || (fast->next->next == NULL)) {                  
+            return NULL;                                                              
+        }                                                                          
+        fast = fast->next->next;                                                   
+        slow = slow->next;                                                         
+        /* fast pointer equal to slow, circle
+         * put check after fast and slow update, as fast and slow are both
+		 * initialized to head, this is their meet again.
+         */                                                                     
+        if (fast == slow) {                                                        
+            return fast;                                                              
+        }                                                                       
+    }                                                                              
+}
+```  
+
+**如何得到环的入口点**  
+前面我们判断出链表是否存在环，假如存在环，且环的大小是n。那么我们通过前后指针，
+让前指针先走n步，然后前后指针一起走，当前后指针相遇的时候就是环的入口点。 
+这里可以这样理解，你和同学从教室跑去绕操场，你同学一直在领先你一圈的位置。  
+那么，当你跑到操场入口的时候，你同学在你前面一圈的位置，也就是刚好也在操场入口。  
+* 求出环的长度n，只需要从环上一点，开始循环计数，直到回到原点，即得环长度  
+* 前指针走n步，前后指针一起走，直到前后指针重叠  
+* 返回此时前后指针的节点，即为环的入口点，因为此时后指针刚好走了1圈
+
+```
+/*
+ * node in the circle can be get from the list_contain_circle interface.
+ */
+int list_circle_length(struct list_node *circle_node)                              
+{                                                                                  
+    int circle_len = 0;                                                            
+    struct list_node *curr = circle_node->next;                                    
+                                                                                   
+    while (curr != circle_node) {                                                  
+        circle_len++;                                                              
+        curr = curr->next;                                                         
+    }                                                                              
+                                                                                   
+    return circle_len + 1;                                                         
+}                                                                                  
+                                                                                   
+struct list_node *list_circle_entry(struct list_node *head)                        
+{                                                                               
+    struct list_node *before = head;                                            
+    struct list_node *after = head;                                             
+    struct list_node *node_in_circle = list_contain_circle(head);               
+    int circle_len = 0;                                                         
+    int step = 0;                                                               
+                                                                                
+    if (!node_in_circle) {                                                      
+        return NULL;                                                            
+    }                                                                           
+    circle_len = list_circle_length(node_in_circle);                            
+                                                                                
+    /* before pointer move circle_len step */                                   
+    for (step = 0; step < circle_len; step++) {                                 
+        before = before->next;                                                  
+    }                                                                           
+                                                                                
+    /* move together */                                                         
+    while (before != after) {                                                   
+        before = before->next;                                                  
+        after = after->next;                                                    
+    }                                                                           
+                                                                                
+    return before;                                                              
+}
+```  
+可以看到，在判断是否有环时遍历了一遍链表，在计算环长度遍历了环，
+最后查找入口节点时最多可能遍历一边链表。因此，时间复杂度在$$O(n)$$量级。  
+  
+## 三、总结  
+在数组中使用双指针，通常需要是排序的数组，因此，如果需要可以先对数组进行排序。
+数组中双指针进一步可能拓展到多指针，如*[leetcode-632](https://leetcode-cn.com/problems/smallest-range-covering-elements-from-k-lists)
+最小区间问题。*  
+双指针也会用在字符串中，如*[leetcode-76](https://leetcode-cn.com/problems/minimum-window-substring/)最小覆盖字串。*  
 
