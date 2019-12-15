@@ -23,8 +23,7 @@
         "tbfed-pagefooter",
         "-sharing",
         "-highlight",
-        "styles-less",
-        "mathjax"
+        "styles-less"
     ],
     "pluginsConfig": {
         "github": {
