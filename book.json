@@ -16,21 +16,18 @@
         "chapter-fold",
         "code",
         "-search",
-        "copy-code-button",
         "search-pro",
         "github",
         "splitter",
         "tbfed-pagefooter",
         "-sharing",
         "-highlight",
-        "styles-less"
+        "styles-less",
+        "katex"
     ],
     "pluginsConfig": {
         "github": {
             "url": "https://github.com/movetobe"
-        },
-        "code": {
-            "copyButtons": true
         },
         "tbfed-pagefooter": {
             "copyright": "Copyright © Jason 2019",
