@@ -33,6 +33,11 @@
             "copyright": "Copyright © Jason 2019",
             "modify_label": "本书发布时间：",
             "modify_format": "YYYY-MM-DD HH:mm:ss"
-        }
+        },
+		"fontsettings": {
+      		"theme": "white",
+      		"family": "serif",
+      		"size": 1
+		}
     }
 }
