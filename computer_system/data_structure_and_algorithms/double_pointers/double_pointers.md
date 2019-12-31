@@ -1,6 +1,7 @@
 ## 一、双指针
 双指针是指使用两个指针对线性数据结构进行遍历/搜索的方法。
 双指针方法包括：  
+
 * 首尾指针
 * 快慢指针
 * 前后指针
@@ -17,6 +18,7 @@
 
 采用首尾指针的双指针方法，如图所示：  
 <img src="front-tail.png" width="300" align=center/>  
+
 * 若nums[front] + nums[tail] < s, 则说明nums[front]太小了，需要增大，故front++;  
 * 若nums[front] + nums[tail] > s，则说明nums[tail]太大了，需要减小，故tail--;  
 * 若nums[front] + nums[tail] == s，得到解；  
@@ -66,6 +68,7 @@ int target_sum(int *nums, int nums_size, int target, int *ret_array)
 
 采用前后指针方法，如图所示：  
 <img src="before-after.png" width="500" align=center/>
+
 * 前指针先走k步
 * 前后指针一起走，直到前指针走到NULL
 * 此时后指针指向的节点就是链表的倒数第k个节点
@@ -119,6 +122,7 @@ struct list_node *find_last_kth_node(struct list_node *head, int k)
 如果操场是直线的操场，那么跑得快的永远都在前面，直到尽头。  
 如果操场是圆圈的操场，那么跑得慢的同学和跑得快的同学总会相遇，而且肯定是在操场上相遇。  
 回到题目中，我们就可以这样来判断链表中是否有环：  
+
 * 快指针一次走2步，慢指针一次走1步，两个同时从头指针处开始走
 * 如果快指针走到了NULL，那说明没有环
 * 如果快指针与慢指针再次相遇了，说明存在环  
@@ -153,6 +157,7 @@ struct list_node *list_contain_circle(struct list_node *head)
 让前指针先走n步，然后前后指针一起走，当前后指针相遇的时候就是环的入口点。 
 这里可以这样理解，你和同学从教室跑去绕操场，你同学一直在领先你一圈的位置。
 那么，当你跑到操场入口的时候，你同学在你前面一圈的位置，也就是刚好也在操场入口。  
+
 * 求出环的长度n，只需要从环上一点，开始循环计数，直到回到原点，即得环长度  
 * 前指针走n步，前后指针一起走，直到前后指针重叠  
 * 返回此时前后指针的节点，即为环的入口点
