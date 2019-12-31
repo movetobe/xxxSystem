@@ -3,9 +3,8 @@
     "description": "记录成长点滴",
     "author": "Jason",
     "output.name": "site",
-    "language": "zh-hans",
     "gitbook": "3.2.3",
-    "root": ".",
+    "root": "./",
     "links": {
         "sidebar": {
             "首页": "http://movetobe.github.io"
@@ -13,7 +12,7 @@
     },
     "plugins": [
         "back-to-top-button",
-        "chapter-fold",
+		"chapter-fold",
         "code",
         "-search",
         "search-pro",
@@ -21,9 +20,10 @@
         "splitter",
         "tbfed-pagefooter",
         "-sharing",
-        "-highlight",
+        "highlight",
         "styles-less",
-        "katex"
+        "-katex",
+		"-lunr"
     ],
     "pluginsConfig": {
         "github": {
