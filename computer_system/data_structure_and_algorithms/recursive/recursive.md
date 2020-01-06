@@ -181,8 +181,77 @@ int compare_word(char **board, int row, int col, int x, int y,
 ```
 
 ## 三、总结
-三步走：  
+解题三步走：  
 
 * 结束条件
 * options：往哪个方向走？
 * 是否需要回溯？
+
+子问题优化：
+
+* 空间换时间，额外空间缓存已经求解的子问题
+
+最后以优化的递归来结束递归/回溯章节
+
+#### *[\[leetcode-403\]](https://leetcode-cn.com/problems/frog-jump/) 青蛙过河*
+*一只青蛙想要过河。 假定河流被等分为 x 个单元格，并且在每一个单元格内都有可能放有一石子（也有可能没有）。 青蛙可以跳上石头，但是不可以跳入水中。给定石子的位置列表（用单元格序号升序表示）， 请判定青蛙能否成功过河（即能否在最后一步跳至最后一个石子上）。 开始时， 青蛙默认已站在第一个石子上，并可以假定它第一步只能跳跃一个单位（即只能从单元格1跳至单元格2）。如果青蛙上一步跳跃了 k 个单位，那么它接下来的跳跃距离只能选择为 k - 1、k 或 k + 1个单位。   
+输入：[0,1,3,5,6,8,12,17]  
+输出：true  
+解释：
+总共有8个石子。  
+第一个石子处于序号为0的单元格的位置, 第二个石子处于序号为1的单元格的位置,  
+第三个石子在序号为3的单元格的位置， 以此定义整个数组...  
+最后一个石子处于序号为17的单元格的位置。    
+青蛙可以成功过河：   
+跳1个单位到第2块石子, 然后跳2个单位到第3块石子, 接着   
+跳2个单位到第4块石子, 然后跳3个单位到第6块石子,   
+跳4个单位到第7块石子, 最后，跳5个单位到第8个石子（即最后一块石子）。*  
+
+按前面叙述的几个步骤：
+
+* 结束条件：跳到了最后一个石子
+* options：跳 k - 1, k, k + 1 三种可能性
+* 不需要回溯，找到就说明存在，没找到就是不存在
+* 优化
+
+<img src="frog-jump.png" width=600 align=center />   
+
+如图所示，假设青蛙从index跳k步到next\_index，那么只要判断从next\_index开始，经过k - 1, k, k + 1步能否到达终点。如果青蛙从index跳k步到达不了next\_index，那么到达不了。
+
+重复子问题的优化，只需要用一个二维数组，保存从index跳k步能否到达终点。如果从index跳k步的子问题已经求解过了，则直接返回。否则需要递归求解，求解的结果保存在数组中。
+
+```
+/* cross(stones, stonesSize, 0, 1, cross_hist) */
+int cross(int *stones, int stones_size, int index, int step, int **cross_hist)  
+{                                                                               
+    int stone = stones[index] + step;                                           
+    int next_index = 0;                                                         
+                                                                                
+    /* ended position: step to last one */                                      
+    if (stone == stones[stones_size - 1]) {                                     
+        return CROSS_YES;                                                       
+    }                                                                           
+                                                                                
+    /* optimize: had been solved */                                                       
+    if (cross_hist[index][step] > CROSS_NONE) {                                 
+        return cross_hist[index][step];                                         
+    }                                                                              
+                                                                                   
+    /* next stone's position, -1 means cannot cross */                                                      
+    next_index = next(stones, stones_size, stone, index);                          
+    if (next_index < 0) {                                                          
+        return CROSS_NO;                                                           
+    }                                                                              
+                                                                                   
+    /* options: from next_index, jump k + 1, k, k - 1 steps */                                                               
+    if ((cross(stones, stones_size, next_index, step + 1, cross_hist) == CROSS_YES)
+        || (cross(stones, stones_size, next_index, step, cross_hist) == CROSS_YES)
+        || (cross(stones, stones_size, next_index, step - 1, cross_hist) == CROSS_YES)) {
+        cross_hist[index][step] = CROSS_YES;                                    
+        return CROSS_YES;                                                       
+    } 
+    
+    cross_hist[index][step] = CROSS_NO;                                         
+    return CROSS_NO;                                                            
+}          
+```
