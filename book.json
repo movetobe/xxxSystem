@@ -24,7 +24,8 @@
         "styles-less",
         "-katex",
 		"-lunr",
-		"-fontsettings"
+		"-fontsettings",
+		"pageview-count"
     ],
     "pluginsConfig": {
         "github": {
