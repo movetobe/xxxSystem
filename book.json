@@ -22,7 +22,7 @@
         "-sharing",
         "highlight",
         "styles-less",
-        "-katex",
+        "katex",
 		"-lunr",
 		"-fontsettings",
 		"pageview-count"
