@@ -8,8 +8,11 @@
 		* [单调栈](computer_system/data_structure_and_algorithms/mono_stack/mono_stack.md)
 		* [递归/回溯](computer_system/data_structure_and_algorithms/recursive/recursive.md)
 		* [动态规划](computer_system/data_structure_and_algorithms/dynamic_programming/dynamic_programming.md)
+		* [树](computer_system/data_structure_and_algorithms/tree/tree.md)
 
 * [汽车系统](automotive_system/auto_sys.md)
 	* [AUTOSAR标准](automotive_system/autosar/autosar.md)
 		* [OSEK OS](automotive_system/autosar/osek_os/osek.md)
 			* [Task Management](automotive_system/autosar/osek_os/task/task.md)
+
+* [阅读](readings/reading.md)
