@@ -9,7 +9,7 @@
 		* [动态规划](computer_system/data_structure_and_algorithms/dynamic_programming/dynamic_programming.md)
 		* [单调栈](computer_system/data_structure_and_algorithms/mono_stack/mono_stack.md)
 		* [二叉树](computer_system/data_structure_and_algorithms/tree/tree.md)
-		* [图](computer/data_structure_and_algorithms/graph/graph.md)
+		* [图](computer_system/data_structure_and_algorithms/graph/graph.md)
 
 * [汽车系统](automotive_system/auto_sys.md)
 	* [AUTOSAR标准](automotive_system/autosar/autosar.md)
