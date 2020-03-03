@@ -1,9 +1,14 @@
 ## 最短路径
 #### Dijkstra
-#### Shortest Path Fast Algorithm
+#### Shortest Path Fast Algorithm (SPFA)
 
+## 图搜索
+#### 广度优先搜索
+
+#### 深度优先搜索
 
 ## 拓扑排序
+实际上，拓扑排序可以看作是
 拓扑排序的基本方法：  
 1. 从图中选取所有入度为0的点，入队列
 1. 出队列取值，得到入度为0的点A
@@ -39,7 +44,8 @@ void topological_sort(int **graph, int *ingree, int num, int *path)
                 }                                                               
             }                                                                   
         }                                                                       
-    }                                                                                                                                          
-    destroy_queue(q);                                                                                                               return;                                                         
+    }                                                                                                                              
+    destroy_queue(q);
+    return;            
 }
 ```
