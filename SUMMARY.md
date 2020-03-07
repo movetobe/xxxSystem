@@ -10,10 +10,8 @@
 		* [单调栈](computer_system/data_structure_and_algorithms/mono_stack/mono_stack.md)
 		* [二叉树](computer_system/data_structure_and_algorithms/tree/tree.md)
 		* [图](computer_system/data_structure_and_algorithms/graph/graph.md)
+    * [leetcode](computer_system/leetcode/leetcode.md)
+        * [每日一题-2020/03](computer_system/leetcode/leetcode_everyday/202003.md)
 
-* [汽车系统](automotive_system/auto_sys.md)
-	* [AUTOSAR标准](automotive_system/autosar/autosar.md)
-		* [OSEK OS](automotive_system/autosar/osek_os/osek.md)
-			* [Task Management](automotive_system/autosar/osek_os/task/task.md)
-
-* [阅读](readings/reading.md)
+* [阅读](readings/readings.md)
+    * [看见](readings/see/reading.md)

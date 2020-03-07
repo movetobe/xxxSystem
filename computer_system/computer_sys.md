@@ -1,3 +1,3 @@
-### Hello CS  
 
-#### [常见数据结构算法总结](data_structure_and_algorithms/algorithms.md)
+
+记录总结成长过程中的计算机技术知识
