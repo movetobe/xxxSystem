@@ -12,6 +12,7 @@
 		* [图](computer_system/data_structure_and_algorithms/graph/graph.md)
     * [leetcode](computer_system/leetcode/leetcode.md)
         * [每日一题-2020/03](computer_system/leetcode/leetcode_everyday/202003.md)
+        * [每周一赛-179-week](computer_system/leetcode/leetcode_week/leetcode_179_week.md)
 
 * [阅读](readings/readings.md)
     * [看见](readings/see/reading.md)
