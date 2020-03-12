@@ -108,7 +108,7 @@ int cross_obstacles(int **matrix, struct position *start, struct position *end, 
 }
 ```
 
-类似的题目如*[\[leetcode-5347\]](https://leetcode-cn.com/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/) 使网格图至少有一条有效路径的最小代价*, 此时，由于只需要有效路径，故只需要能让cost变小的路径就应该更新cost。
+类似的题目如*[\[leetcode-5347\]](https://leetcode-cn.com/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/) 使网格图至少有一条有效路径的最小代价*, 此时，由于只需要有效路径，故只需要能让cost变小的路径就应该更新cost。
 
 ```
 /* d[i][j] -> d[i + dx][j + dy] update everytime if the value less. */          
@@ -178,7 +178,7 @@ int min_cost(int **grid, int grid_size, int *grid_col_size)
 ## 二、拓扑排序
 实际上，拓扑排序可以看作是
 拓扑排序的基本方法：  
-1. 从图中选取所有入度为0的点，入队列
+1. 从图中选取所有入度为0的点，入队列
 1. 出队列取值，得到入度为0的点A
 1. 遍历所有节点，如果节点的入度为A，删除该节点的入边A，如果删除之后入度为0，则入队列
 1. 循环处理2-3，直到所有都处理完，即队列为空
