@@ -6,6 +6,7 @@
         * [云计算网络](computer_system/computer_networking/cloud_networking/cloud_net.md)
             * [VIRTIO/VHOST](computer_system/computer_networking/cloud_networking/virtio/virtio.md)
                 * [VIRTIO/VHOST实验环境搭建](computer_system/computer_networking/cloud_networking/virtio/virtio_env.md)
+                * [VIRTIO/VHOST问题定位](computer_system/computer_networking/cloud_networking/virtio/virtio_qa.md)
     * [数据结构与算法](computer_system/data_structure_and_algorithms/algorithms.md)
         * [双指针](computer_system/data_structure_and_algorithms/double_pointers/double_pointers.md)
         * [递归/回溯](computer_system/data_structure_and_algorithms/recursive/recursive.md)
