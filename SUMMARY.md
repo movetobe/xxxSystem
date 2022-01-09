@@ -18,6 +18,8 @@
             * [1. 顺序实现](computer_system/深入理解计算机系统/第四章处理器体系结构/1-顺序实现.md)
         * [第五章 优化程序性能](computer_system/深入理解计算机系统/第五章优化程序性能/chapter5.md)
             * [1. 优化程序性能](computer_system/深入理解计算机系统/第五章优化程序性能/1-优化程序性能.md)
+        * [第六章 存储器层次结构](computer_system/深入理解计算机系统/第六章存储器层次结构/chapter6.md)
+            * [1. 高速缓存](computer_system/深入理解计算机系统/第六章存储器层次结构/1-高速缓存.md)
     * [计算机网络](computer_system/computer_networking/computer_net.md)
         * [云计算网络](computer_system/computer_networking/cloud_networking/cloud_net.md)
             * [VIRTIO/VHOST](computer_system/computer_networking/cloud_networking/virtio/virtio.md)
