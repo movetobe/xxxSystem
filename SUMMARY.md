@@ -22,6 +22,7 @@
             * [1. 高速缓存](computer_system/深入理解计算机系统/第六章存储器层次结构/1-高速缓存.md)
         * [第七章 链接](computer_system/深入理解计算机系统/第七章链接/chapter7.md)
             * [1. 链接基本概念](computer_system/深入理解计算机系统/第七章链接/1-链接基本概念.md)
+            * [2. 重定位](computer_system/深入理解计算机系统/第七章链接/2-重定位.md)
     * [计算机网络](computer_system/computer_networking/computer_net.md)
         * [云计算网络](computer_system/computer_networking/cloud_networking/cloud_net.md)
             * [VIRTIO/VHOST](computer_system/computer_networking/cloud_networking/virtio/virtio.md)
