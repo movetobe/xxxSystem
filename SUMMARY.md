@@ -53,4 +53,5 @@
 * [阅读](readings/readings.md)
     * [文学](readings/文学/reading.md)
     * [财经](readings/财经/reading.md)
+    * [社会](readings/社会/reading.md)
 
