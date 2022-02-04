@@ -27,6 +27,8 @@
             * [1. 异常](computer_system/深入理解计算机系统/第八章异常控制流/1-异常.md)
             * [2. 进程](computer_system/深入理解计算机系统/第八章异常控制流/2-进程.md)
             * [3. 信号](computer_system/深入理解计算机系统/第八章异常控制流/3-信号.md)
+        * [第九章 虚拟内存](computer_system/深入理解计算机系统/第九章虚拟内存/chapter9.md)
+            * [1. 虚拟内存](computer_system/深入理解计算机系统/第九章虚拟内存/1-虚拟内存.md)
     * [计算机网络](computer_system/computer_networking/computer_net.md)
         * [云计算网络](computer_system/computer_networking/cloud_networking/cloud_net.md)
             * [VIRTIO/VHOST](computer_system/computer_networking/cloud_networking/virtio/virtio.md)
