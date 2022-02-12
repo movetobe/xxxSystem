@@ -62,4 +62,5 @@
     * [文学](readings/文学/reading.md)
     * [财经](readings/财经/reading.md)
     * [社会](readings/社会/reading.md)
+    * [科学](readings/科学/reading.md)
 
