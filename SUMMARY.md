@@ -78,7 +78,7 @@
         * [李自成](readings/文学/李自成.md)
     * [财经](readings/财经/reading.md)
         * [价值](readings/财经/价值.md)
-        * [我的经验与教训](readings/财经/我的检验与教训.md)
+        * [我的经验与教训](readings/财经/我的经验与教训.md)
         * [置身事内](readings/财经/置身事内.md)
     * [社会](readings/社会/reading.md)
         * [非暴力沟通](readings/社会/非暴力沟通.md)
