@@ -46,6 +46,8 @@
             * [1. 门与电路](computer_system/计算机科学概论/第四章门与电路/1-门与电路.md)
         * [第五章 计算部件](computer_system/计算机科学概论/第五章计算部件/chapter5.md)
             * [1. 计算部件](computer_system/计算机科学概论/第五章计算部件/1-计算部件.md)
+        * [第六章 程序设计语言](computer_system/计算机科学概论/第六章程序设计语言/chapter6.md)
+            * [1. 程序设计语言](computer_system/计算机科学概论/第六章程序设计语言/1-程序设计语言.md)
     * [计算机网络](computer_system/computer_networking/computer_net.md)
         * [云计算网络](computer_system/computer_networking/cloud_networking/cloud_net.md)
             * [VIRTIO/VHOST](computer_system/computer_networking/cloud_networking/virtio/virtio.md)
