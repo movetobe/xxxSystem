@@ -83,4 +83,5 @@
         * [深入理解计算机系统](computer_system/深入理解计算机系统/深入理解计算机系统.md)
         * [程序员的数学](readings/科学/程序员的数学.md)
         * [计算机科学概论](computer_system/计算机科学概论/计算机科学概论.md)
+        * [计算机体系结构](computer_system/计算机体系结构/计算机体系结构.md)
 
