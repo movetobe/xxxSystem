@@ -15,7 +15,6 @@
         * [第十章 系统级IO](computer_system/深入理解计算机系统/第十章系统级IO/chapter10.md)
         * [第十一章 网络编程](computer_system/深入理解计算机系统/第十一章网络编程/chapter11.md)
         * [第十二章 并发编程](computer_system/深入理解计算机系统/第十二章并发编程/chapter12.md)
-    * [计算机科学概论](computer_system/计算机科学概论/计算机科学概论.md)
     * [计算机体系结构](computer_system/计算机体系结构/计算机体系结构.md)
         * [第一章 量化设计与分析基础](computer_system/计算机体系结构/第一章量化设计与分析基础/chapter1.md)
     * [计算机网络](computer_system/computer_networking/computer_net.md)
