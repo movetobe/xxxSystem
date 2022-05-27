@@ -59,6 +59,7 @@
         * [价值](readings/财经/价值.md)
         * [我的经验与教训](readings/财经/我的经验与教训.md)
         * [置身事内](readings/财经/置身事内.md)
+        * [转型中的地方政府](readings/财经/转型中的地方政府.md)
     * [社会](readings/社会/reading.md)
         * [非暴力沟通](readings/社会/非暴力沟通.md)
     * [科学](readings/科学/reading.md)
