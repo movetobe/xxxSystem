@@ -14,6 +14,8 @@ PCI配置空间的起始地址为base_addr，例如QEMU模拟ARM，在hw/arm/vir
 也就是说， 对于Bus:Device.Function的PCI设备，它的配置存放在地址base_addr + ((Bus << 16) | (Device << 11) | (Function << 8) | (Register Offset & 0xFCU)) 中。
 > Register Offset要求是4字节对齐。
 
+对于64-bits的PCIE设备，情况有点区别，配置空间的基地址是0x40-10000000，对于设备配置存放的地址偏移则为base_addr + (Bus << 20 | Device << 15 | Function << 12)。其他可能的区别可以参考 https://wiki.osdev.org/PCI_Express。
+
 ### 每个设备配置空间
 PCI设备的配置空间有多种格式：
 * Header Type 0x00：普通的PCI Endpoints
@@ -29,7 +31,7 @@ PCI设备的配置空间有多种格式：
 
 <image src="pci-device-conf-space-bar.png" align=center/>
 
-3.  对于QEMU模拟ARM，在hw/arm/virt.c中可以找到VIRT_PCIE_MMIO，对应的地址从0x10000000开始分配，该地址就作为设备与驱动的共享内存空间。分配的大小在设备初始化的时候注册BAR空间时决定。确定设备的地址空间后，将该地址写回BAR字段。
+3.  对于QEMU模拟ARM，在hw/arm/virt.c中可以找到VIRT_PCIE_MMIO，对应的地址从0x10000000开始分配，该地址就作为设备与驱动的共享内存空间。分配的大小在设备初始化的时候注册BAR空间时决定。确定设备的地址空间后，将该地址写回BAR字段。对于64-bits的PCIE设备，MMIO地址则为0x80-00000000。
 
 ### PCI设备其他属性
 * 设置设备的Command命令字段，如disable interrupt/enable interrupt等属性：

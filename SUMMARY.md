@@ -19,6 +19,8 @@
         * [第一章 量化设计与分析基础](computer_system/计算机体系结构/第一章量化设计与分析基础/chapter1.md)
         * [第二章 存储器层次结构设计](computer_system/计算机体系结构/第二章存储器层次结构设计/chapter2.md)
         * [第三章 指令级并行及其开发](computer_system/计算机体系结构/第三章指令级并行及其开发/chapter3.md)
+    * [计算机组成与设计](computer_system/计算机组成与设计/计算机组成与设计.md)
+        * [第一章 计算机概要与技术](computer_system/计算机组成与设计/第一章计算机概要与技术/chapter1.md)
     * [计算机网络](computer_system/computer_networking/computer_net.md)
         * [云计算网络](computer_system/computer_networking/cloud_networking/cloud_net.md)
             * [VIRTIO/VHOST](computer_system/computer_networking/cloud_networking/virtio/virtio.md)
@@ -68,4 +70,5 @@
         * [程序员的数学](readings/科学/程序员的数学/程序员的数学.md)
         * [计算机科学概论](readings/科学/计算机科学概论/计算机科学概论.md)
         * [计算机体系结构](computer_system/计算机体系结构/计算机体系结构.md)
+        * [计算机组成与设计](computer_system/计算机组成与设计/计算机组成与设计.md)
 
