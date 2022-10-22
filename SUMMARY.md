@@ -64,6 +64,7 @@
         * [转型中的地方政府](readings/财经/转型中的地方政府.md)
     * [社会](readings/社会/reading.md)
         * [非暴力沟通](readings/社会/非暴力沟通.md)
+        * [邓小平时代](readings/社会/邓小平时代.md)
     * [科学](readings/科学/reading.md)
         * [现代操作系统](readings/科学/现代操作系统.md)
         * [深入理解计算机系统](computer_system/深入理解计算机系统/深入理解计算机系统.md)
