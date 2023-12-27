@@ -72,4 +72,6 @@
         * [计算机科学概论](readings/科学/计算机科学概论/计算机科学概论.md)
         * [计算机体系结构](computer_system/计算机体系结构/计算机体系结构.md)
         * [计算机组成与设计](computer_system/计算机组成与设计/计算机组成与设计.md)
+* [项目](projects/projects.md)
+    * [FocusOn](projects/FocusOn/FocusOn.md)
 
