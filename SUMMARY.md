@@ -30,6 +30,8 @@
                 * [SmartNIC硬件卸载](computer_system/computer_networking/cloud_networking/SmartNIC/SmartNIC_offload.md)
                 * [virtio-net收发报文分析](computer_system/computer_networking/cloud_networking/SmartNIC/virtio-net.md)
                 * [vhost实现分析](computer_system/computer_networking/cloud_networking/SmartNIC/vhost.md)
+    * [块存储](computer_system/block/block.md)
+        * [NVMe](computer_system/block/nvme/nvme.md)
     * [虚拟化](computer_system/virtualization/virt.md)
         * [QEMU && KVM](computer_system/virtualization/QEMU-KVM/env.md)
             * [PCI/PCIe设备配置](computer_system/virtualization/QEMU-KVM/pci-device.md)
