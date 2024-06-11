@@ -13,4 +13,4 @@
 1. 处理io数据
 
 ### nvme io流程
-<img src="nvme-io.png" align=center width="450" />
+<img src="nvme-io.png" align=center/>
